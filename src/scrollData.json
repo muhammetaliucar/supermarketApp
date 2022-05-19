@@ -1,0 +1,17 @@
+[
+    {
+        "id":0,
+        "image":"../../assets/1.jpg",
+        "text":"20% Discount on Pulse Products!"
+    },
+    {
+        "id":1,
+        "image":"../../assets/2.jpg",
+        "text":"Get 20 $ discount!"
+    },
+    {
+        "id":2,
+        "image":"../../assets/1.jpg",
+        "text":"Happy Hours!!!"
+    }
+]

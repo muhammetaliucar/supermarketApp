@@ -6,13 +6,14 @@ import {
   Image,
   Dimensions,
   StyleSheet,
+  FlatList,
   ScrollView,
 } from "react-native";
-
-const SLIDER_WIDTH = Dimensions.get("window").width + 80;
-const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
+import ScrollCard from "../components/ScrollCard";
+import data from "../scrollData.json";
 
 const Home = () => {
+  console.log(data);
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FDFDFD" }}>
       <View
@@ -41,7 +42,17 @@ const Home = () => {
           />
         </View>
       </View>
-      <ScrollView horizontal></ScrollView>
+      <View>
+        <FlatList
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          pagingEnabled={false}
+          keyExtractor={(item) => item.id}
+          legacyImplementation={false}
+          data={data}
+          renderItem={({ item }) => <ScrollCard data={item} />}
+        />
+      </View>
     </SafeAreaView>
   );
 };

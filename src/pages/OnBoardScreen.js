@@ -9,11 +9,13 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { LinearGradient } from "expo-linear-gradient";
 
 const OnBoardScreen = () => {
   const deviceSize = Dimensions.get("window");
+  const navigation = useNavigation();
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -34,7 +36,15 @@ const OnBoardScreen = () => {
                 width: deviceSize.width * 1,
               }}
             >
-              <View style={{ backgroundColor: "white", borderRadius: 100, padding: 10 }}>
+              <View
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: 100,
+                  padding: 10,
+                  //   borderWidth: 1,
+                  //   borderColor: "#13702c",
+                }}
+              >
                 <Image
                   source={require("../../assets/logo.png")}
                   style={{ height: 100, width: 100, resizeMode: "contain" }}
@@ -43,7 +53,10 @@ const OnBoardScreen = () => {
               <View style={{ marginTop: 10, marginBottom: 20 }}>
                 <Text style={{ fontStyle: "italic" }}>Your slogan here!!</Text>
               </View>
-              <TouchableOpacity style={{ marginBottom: 50 }}>
+              <TouchableOpacity
+                style={{ marginBottom: 50 }}
+                onPress={() => navigation.navigate("Home")}
+              >
                 <LinearGradient
                   colors={["#13702c", "#0f5722", "#0c451b"]}
                   style={styles.linearGradient}

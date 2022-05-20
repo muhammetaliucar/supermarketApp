@@ -9,7 +9,6 @@ const deviceSize = Dimensions.get("window");
 
 const CustomBottomTabBar = ({ state }) => {
   const navigation = useNavigation();
-  console.log(state);
   return (
     <View
       style={{
@@ -39,7 +38,7 @@ const CustomBottomTabBar = ({ state }) => {
           borderRadius: 100,
           padding: 10,
           position: "absolute",
-          right: deviceSize.width / 2.25,
+          right: deviceSize.width / 2.29,
           alignItems: "center",
           justifyContent: "center",
           bottom: 30,

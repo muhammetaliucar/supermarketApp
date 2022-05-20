@@ -41,8 +41,6 @@ const OnBoardScreen = () => {
                   backgroundColor: "white",
                   borderRadius: 100,
                   padding: 10,
-                  //   borderWidth: 1,
-                  //   borderColor: "#13702c",
                 }}
               >
                 <Image
@@ -72,7 +70,7 @@ const OnBoardScreen = () => {
   );
 };
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   linearGradient: {
     paddingLeft: 15,
     paddingRight: 15,

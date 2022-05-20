@@ -1,12 +1,15 @@
 import { StyleSheet, Text, View, StatusBar } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
+import React, { useContext } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import OnBoardScreen from "./src/pages/OnBoardScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import CustomBottomTabBar from "./src/components/CustomBottomTabBar";
+import { MarketProvider } from "./src/contexts/MarketContext";
 
 import Home from "./src/pages/Home";
 import Profile from "./src/pages/Profile";
+import PochettePage from "./src/pages/PochettePage";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -20,17 +23,20 @@ export default function App() {
       >
         <BottomTab.Screen name="HomePage" component={Home} />
         <BottomTab.Screen name="ProfilePage" component={Profile} />
+        <BottomTab.Screen name="PochettePage" component={PochettePage} />
       </BottomTab.Navigator>
     );
   };
 
   return (
     <NavigationContainer>
-      <StatusBar />
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="OnBoardScreen" component={OnBoardScreen} />
-        <Stack.Screen name="Home" component={Bottom} />
-      </Stack.Navigator>
+      <MarketProvider>
+        <StatusBar />
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="OnBoardScreen" component={OnBoardScreen} />
+          <Stack.Screen name="Home" component={Bottom} />
+        </Stack.Navigator>
+      </MarketProvider>
     </NavigationContainer>
   );
 }

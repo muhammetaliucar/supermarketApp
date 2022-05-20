@@ -1,12 +1,9 @@
 import React from "react";
-import { View, ImageBackground, Text, Image } from "react-native";
+import { View, ImageBackground, Text, Image, TouchableOpacity } from "react-native";
 
 const ScrollCard = ({ data }) => {
-  console.log(`../../assets/${data.image}.jpg`);
-  console.log(data.image);
-
   return (
-    <View style={{ elevation: 60 }}>
+    <TouchableOpacity style={{ elevation: 60 }}>
       <ImageBackground
         source={require("../../assets/1.jpg")}
         imageStyle={{ borderRadius: 10 }}
@@ -21,7 +18,7 @@ const ScrollCard = ({ data }) => {
           {data.text}
         </Text>
       </ImageBackground>
-    </View>
+    </TouchableOpacity>
   );
 };
 

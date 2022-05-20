@@ -1,21 +1,13 @@
-import React from "react";
-import {
-  View,
-  SafeAreaView,
-  Text,
-  Image,
-  Dimensions,
-  StyleSheet,
-  FlatList,
-  ScrollView,
-} from "react-native";
-import ScrollCard from "../components/ScrollCard";
-import data from "../scrollData.json";
+import React, { useContext } from "react";
+import { View, SafeAreaView, Text, FlatList } from "react-native";
+import MarketContext from "../contexts/MarketContext";
 
 const Profile = () => {
+  const { data, setData } = useContext(MarketContext);
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FDFDFD" }}>
-      <Text>Profile</Text>
+      <FlatList data={data} renderItem={({ item }) => <Text>{item.name}</Text>} />
     </SafeAreaView>
   );
 };

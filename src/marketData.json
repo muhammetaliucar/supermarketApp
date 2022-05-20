@@ -1,17 +1,55 @@
 [
     {
         "id":0,
-        "image":"../../assets/1.jpg",
-        "text":"20% Discount on Pulse Products!"
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Tomato.png/640px-Tomato.png",
+        "text":"Tomato",
+        "price":2.66,
+        "currency":"$",
+        "cat":"fruit"
     },
     {
         "id":1,
-        "image":"../../assets/2.jpg",
-        "text":"Get 20 $ discount!"
+        "image":"https://cdn.getir.com/product/5cac8d0b03c5fd0001497976_tr_1579677305629.jpeg",
+        "text":"Banana",
+        "price":4.55,
+        "currency":"$",
+        "cat":"fruit"
+
     },
     {
         "id":2,
-        "image":"../../assets/1.jpg",
-        "text":"Happy Hours!!!"
+        "image":"https://cdn.getir.com/product/5f75e61bb45c4e49dc581f30_tr_1601620686605.jpeg",
+        "text":"Golden Apple",
+        "price":7.55,
+        "currency":"$",
+        "cat":"fruit"
+
+    },
+    {
+        "id":3,
+        "image":"https://cdn.getir.com/product/5bbb7a3646559c001e5a77b5_tr_1636582560894.jpeg",
+        "text":"Tangerines",
+        "price":1.55,
+        "currency":"$",
+        "cat":"fruit"
+
+    },
+    {
+        "id":5,
+        "image":"https://cdn.getir.com/product/6050c7a16e5017d2cdb1c214_tr_1616134921226.jpeg",
+        "text":"Avocado",
+        "price":0.99,
+        "currency":"$",
+        "cat":"fruit"
+
+    },
+    {
+        "id":6,
+        "image":"https://cdn.getir.com/product/5c66b5d83d4b940001a4fc64_365324e1-f5ad-440f-b6e0-5c10e268824a.jpeg",
+        "text":" Data Cable White",
+        "price":6.99,
+        "currency":"$",
+        "cat":"tech"
+
     }
 ]

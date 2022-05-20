@@ -1,9 +1,17 @@
 import React from "react";
-import { View, Text, Image, Dimensions, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
+import LinearGradient from "expo-linear-gradient";
 
 const deviceSize = Dimensions.get("window");
 
@@ -32,16 +40,15 @@ const CustomBottomTabBar = ({ state }) => {
         </View>
       </TouchableOpacity>
       <TouchableOpacity
+        onPress={() => navigation.navigate("PochettePage")}
         style={{
           borderWidth: 1,
           borderColor: "white",
           borderRadius: 100,
-          padding: 10,
-          position: "absolute",
-          right: deviceSize.width / 2.29,
           alignItems: "center",
           justifyContent: "center",
           bottom: 30,
+          padding: 10,
           backgroundColor: "#0c451b",
         }}
       >
@@ -60,5 +67,13 @@ const CustomBottomTabBar = ({ state }) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  linearGradient: {
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5,
+  },
+});
 
 export default CustomBottomTabBar;

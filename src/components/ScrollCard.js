@@ -6,7 +6,7 @@ const ScrollCard = ({ data }) => {
   console.log(data.image);
 
   return (
-    <View>
+    <View style={{ elevation: 60 }}>
       <ImageBackground
         source={require("../../assets/1.jpg")}
         imageStyle={{ borderRadius: 10 }}
@@ -14,7 +14,6 @@ const ScrollCard = ({ data }) => {
           width: 250,
           height: 140,
           margin: 10,
-          elevation: 10,
           alignItems: "flex-end",
         }}
       >

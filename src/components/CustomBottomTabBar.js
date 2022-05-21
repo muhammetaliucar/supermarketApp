@@ -24,8 +24,8 @@ const CustomBottomTabBar = ({ state }) => {
         paddingHorizontal: 20,
         backgroundColor: "#13702c",
         flexDirection: "row",
-        borderTopRightRadius: 30,
-        borderTopLeftRadius: 30,
+        // borderTopRightRadius: 30,
+        // borderTopLeftRadius: 30,
         justifyContent: "space-between",
       }}
     >

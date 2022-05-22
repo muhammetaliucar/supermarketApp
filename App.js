@@ -23,7 +23,6 @@ export default function App() {
       >
         <BottomTab.Screen name="HomePage" component={Home} />
         <BottomTab.Screen name="ProfilePage" component={Profile} />
-        <BottomTab.Screen name="PochettePage" component={PochettePage} />
       </BottomTab.Navigator>
     );
   };
@@ -35,6 +34,7 @@ export default function App() {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="OnBoardScreen" component={OnBoardScreen} />
           <Stack.Screen name="Home" component={Bottom} />
+          <Stack.Screen name="PochettePage" component={PochettePage} />
         </Stack.Navigator>
       </MarketProvider>
     </NavigationContainer>

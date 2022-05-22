@@ -10,6 +10,7 @@ import { MarketProvider } from "./src/contexts/MarketContext";
 import Home from "./src/pages/Home";
 import Profile from "./src/pages/Profile";
 import PochettePage from "./src/pages/PochettePage";
+import CampaignPage from "./src/pages/CampaignPage";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -35,6 +36,7 @@ export default function App() {
           <Stack.Screen name="OnBoardScreen" component={OnBoardScreen} />
           <Stack.Screen name="Home" component={Bottom} />
           <Stack.Screen name="PochettePage" component={PochettePage} />
+          <Stack.Screen name="CampaignPage" component={CampaignPage} />
         </Stack.Navigator>
       </MarketProvider>
     </NavigationContainer>

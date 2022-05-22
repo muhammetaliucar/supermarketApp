@@ -68,7 +68,7 @@ const PochettePage = () => {
           >
             <Text
               style={{
-                fontSize: 26,
+                fontSize: 24,
                 textAlign: "center",
                 color: "white",
                 fontWeight: "bold",

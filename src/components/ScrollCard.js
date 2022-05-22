@@ -1,11 +1,17 @@
 import React from "react";
 import { View, ImageBackground, Text, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const ScrollCard = ({ data }) => {
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity style={{ elevation: 60 }}>
+    <TouchableOpacity
+      onPress={() => navigation.navigate("CampaignPage", data)}
+      style={{ elevation: 60 }}
+    >
       <ImageBackground
-        source={require("../../assets/1.jpg")}
+        source={{ uri: data.image }}
         imageStyle={{ borderRadius: 10 }}
         style={{
           width: 250,
@@ -14,7 +20,7 @@ const ScrollCard = ({ data }) => {
           alignItems: "flex-end",
         }}
       >
-        <Text style={{ color: "white", fontWeight: "bold", margin: 10 }}>
+        <Text style={{ color: "black", fontWeight: "bold", margin: 10 }}>
           {data.text}
         </Text>
       </ImageBackground>

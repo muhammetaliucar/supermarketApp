@@ -70,7 +70,9 @@ const ProductCard = ({ data, deneme }) => {
         >
           <Image source={{ uri: data.image }} style={{ width: 200, height: 200 }} />
           <Text style={{ fontSize: 18 }}>{data.text}</Text>
-          <Text style={{ fontSize: 18 }}>
+          <Text
+            style={{ fontSize: 20, color: "#13702c", fontWeight: "bold", marginTop: 20 }}
+          >
             {data.currency}
             {data.price}
           </Text>

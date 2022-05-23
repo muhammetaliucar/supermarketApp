@@ -14,7 +14,6 @@ import { AntDesign } from "@expo/vector-icons";
 const CampaignPage = () => {
   const route = useRoute().params;
   const navigation = useNavigation();
-  console.log(route, "ro");
 
   return (
     <SafeAreaView style={{ justifyContent: "space-between", flex: 1 }}>

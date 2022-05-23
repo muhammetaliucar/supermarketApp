@@ -48,7 +48,6 @@ const PochettePage = () => {
           flexDirection: "row",
         }}
       >
-        {/* <Entypo name="shopping-bag" size={24} color="#13702c" /> */}
 
         <View
           style={{
